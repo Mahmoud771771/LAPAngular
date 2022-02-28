@@ -1,0 +1,22 @@
+<div class="clasfecation" *ngFor="let boxItem of ProductList">
+
+    <div class="box">
+        <a href="#"><img [src]="boxItem.Img" title="Click To Preview Image"/></a>
+        <div class="contant">
+            <h3> {{boxItem.Name}} </h3>
+                <p>
+                    <!-- OPPO A94 Dual SIM Smartphone 128GB 8GB RAM, 30W VOOC Flash Charge 48MP -->
+                    {{boxItem.Quantity}}
+                </p>
+                <p>{{boxItem.Price}}
+
+                </p>    
+            </div>
+        <div class="info">
+            <a href="Details.html#oppo"> Details</a>
+            <a href="Details.html#oppo"> Add to Cart</a>
+            <a href="Details.html#oppo"> Buy</a>
+
+        </div>
+    </div>
+</div>

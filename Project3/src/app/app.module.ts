@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import { ContentBoxInfoComponent } from './content-box-info/content-box-info.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterPipe } from './filter.pipe';
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    FilterPipe
+    FilterPipe,
+    ContentBoxInfoComponent
   ],
   imports: [
     BrowserModule,

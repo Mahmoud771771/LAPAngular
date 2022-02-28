@@ -1,14 +1,14 @@
-import { ICategory } from './../Shared_Classes_and_types/ICategory';
 import { Component, OnInit } from '@angular/core';
 import { DiscountOffers } from '../Shared_Classes_and_types/DiscountOffers';
+import { ICategory } from '../Shared_Classes_and_types/ICategory';
 import { IProduct } from '../Shared_Classes_and_types/IProduct';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-content-box-info',
+  templateUrl: './content-box-info.component.html',
+  styleUrls: ['./content-box-info.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ContentBoxInfoComponent implements OnInit {
 
   Discount:DiscountOffers;
   StoreName:string;
@@ -39,10 +39,7 @@ export class ProductsComponent implements OnInit {
     this.IsPurshased=true;
     // this.hederProducts1=Object.keys(ProductList[0])
   }
-  displayMsg(){
-    this.dataMessage="Thanks for purchasing from our Store";
-    this.IsFlag=false;
-  }
+
 
   ngOnInit(): void {
   }
