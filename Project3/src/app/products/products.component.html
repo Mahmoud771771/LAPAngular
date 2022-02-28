@@ -1,3 +1,46 @@
+<div class="container">
 <h1>{{StoreName}}</h1>
+<select name="phone" id="phoneID" >
+    <option *ngFor="let phoneCategory of CategoryList">{{phoneCategory.Name}}</option>
+</select>
 <img [src]="Store_Logo"/>
-<h3>{{"We offer an explicit discount of"+Discount}}</h3>
+<input [(ngModel)]="dataName">
+<input type="text" value="{{dataName}}">
+<br/>
+<input type="button" value="Buy" (click)="displayMsg()">
+<div><p> {{dataMessage}}</p></div>
+
+<h3 *ngIf="Discount=='No_Discount'?false:true">{{"We offer an explicit discount of"}} {{Discount|percent}}</h3>
+<br/><br/><br/><br/>
+<div>
+    {{dataName|uppercase}}
+    {{Discount|percent}}
+    <br/>
+    {{10|filter:[10,20,50,60,60]}}
+</div>
+    <table class="table table table-striped" *ngIf="IsFlag">
+        <thead  class=" table-dark" >
+            <tr>
+                <th *ngFor="let headerth of hederProducts">{{headerth}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let bodytd of ProductList">
+                <td>
+                {{bodytd.ID}}
+                </td>
+                <td>
+                    {{bodytd.Name}}
+                </td>
+                <td>
+                    {{bodytd.Quantity}}
+                </td><td>
+                    {{bodytd.Price}}
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

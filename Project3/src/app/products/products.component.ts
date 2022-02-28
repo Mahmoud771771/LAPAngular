@@ -17,14 +17,25 @@ export class ProductsComponent implements OnInit {
   CategoryList:ICategory[];
   ClientName:string;
   IsPurshased:boolean;
+  hederProducts=["ID","Name","Quantity","Price"];
+  // hederProducts1=Array[];
+  dataName:string="";
+  dataMessage:string="";
+  IsFlag:boolean=true;
+
   constructor() { 
     this.Discount=DiscountOffers.Low_Diccount;
     this.StoreName="School";
     this.Store_Logo="../assets/Images/shop.jpg";
-    this.ProductList=[{ID:2,Name:"oppof11",Quantity:5,Price:2000,Img:""}];
-    this.CategoryList=[{ID:1,Name:"oppo"}];
+    this.ProductList=[{ID:2,Name:"oppof11",Quantity:5,Price:2000,Img:""},{ID:2,Name:"oppof11",Quantity:5,Price:2000,Img:""}];
+    this.CategoryList=[{ID:1,Name:"oppo"},{ID:2,Name:"Samsung"},{ID:3,Name:"Apple"},{ID:4,Name:"Nokia"}];
     this.ClientName="Mahmoud";
     this.IsPurshased=true;
+    // this.hederProducts1=Object.keys(ProductList[0])
+  }
+  displayMsg(){
+    this.dataMessage="Thanks for purchasing from our Store"
+    this.IsFlag=false;
   }
 
   ngOnInit(): void {
