@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ViewChild } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,8 @@ import { ContentBoxInfoComponent } from './content-box-info/content-box-info.com
     FooterComponent,
     ProductsComponent,
     FilterPipe,
-    ContentBoxInfoComponent
+    ContentBoxInfoComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -27,4 +28,6 @@ import { ContentBoxInfoComponent } from './content-box-info/content-box-info.com
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

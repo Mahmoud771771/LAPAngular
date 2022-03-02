@@ -1,3 +1,34 @@
 <app-header></app-header>
+<input type="button" value="View" (click)="FunShow()" >
+
+<div *ngIf="flag">
+    <!-- <input type="search" #value [(ngModel)]="dataSearch">     -->
+        <table class="table table table-striped" >
+            <thead  class=" table-dark" >
+                <tr>
+                    <th *ngFor="let headerth of header">{{headerth}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let bodytd of productList">
+                    <td>
+                    {{bodytd.ID}}
+                    </td>
+                    <td>
+                        {{bodytd.Name}}
+                    </td>
+                    <td>
+                        {{bodytd.Quantity}}
+                    </td><td>
+                        {{bodytd.Price}}
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+      
 <app-products></app-products>
 <app-footer></app-footer>

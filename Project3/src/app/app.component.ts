@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductsComponent } from './products/products.component';
+import { ProductServiceService } from './Services/product-service.service';
+import { IProduct } from './Shared_Classes_and_types/IProduct';
 
 @Component({
   selector: 'myfirstapp-root',
@@ -7,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Project3';
+  flag:boolean=false;
+  @ViewChild(ProductsComponent) products:ProductsComponent=new ProductsComponent(new ProductServiceService);
+  productList:IProduct[]=this.products.renderValues();
+  header:string[]= this.products.hederProducts;
+  FunShow(){
+    this.flag = !this.flag;
+  }
 }
